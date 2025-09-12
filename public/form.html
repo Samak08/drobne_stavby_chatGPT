@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Form</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Fill the Form</h1>
+    <a href="/">Back to Home</a>
+  </header>
+  <main class="form-page">
+    <section class="form-left">
+      <form id="order-form">
+        <label>Text field<input type="text" name="text_field" required /></label>
+        <label><input type="checkbox" name="checkbox" /> Check me</label>
+        <label>Select box
+          <select name="select_box" required>
+            <option value="">-- choose --</option>
+            <option value="Option1">Option 1</option>
+            <option value="Option2">Option 2</option>
+          </select>
+        </label>
+        <label>Phone<input type="tel" name="phone" pattern="^\+?[0-9]{9,15}$" required placeholder="+123456789" /></label>
+        <input type="hidden" name="latitude" />
+        <input type="hidden" name="longitude" />
+        <button type="submit" disabled id="submit-btn">Submit</button>
+      </form>
+    </section>
+    <section class="form-right">
+      <div id="map" style="width:100%;height:400px;"></div>
+    </section>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/form.js"></script>
+  <script src="/map.js"></script>
+</body>
+</html>

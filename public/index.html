@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Website — Home</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+    <div id="auth-area"></div>
+  </header>
+  <main>
+    <section id="info">
+      <h2>What this site does</h2>
+      <p>This is a simple site where logged-in users can fill a form that includes a map location. Orders are saved in the database and shown on the homepage.</p>
+      <button id="to-form">Fill the form</button>
+    </section>
+    <section id="orders-section" style="display:none;">
+      <h2>Your Orders</h2>
+      <div id="orders-list"></div>
+    </section>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>
