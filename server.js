@@ -16,7 +16,11 @@ app.use(session({
   secret: 'replace_this_with_a_real_secret',
   resave: false,
   saveUninitialized: false,
-  cookie: { maxAge: 1000 * 60 * 60 * 24 } // 1 day
+  cookie: {
+    httpOnly: true,
+    maxAge: 1000 * 60 * 60 * 24, // 1 day
+    sameSite: "lax" // important for local dev
+  }
 }));
 
 // DB
